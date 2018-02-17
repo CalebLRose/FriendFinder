@@ -1,0 +1,11 @@
+body {
+	background: url("./images/friends.jpg") fixed left no-repeat;
+}
+
+#main {
+	padding-top: 200px;
+}
+
+#btnDiv {
+	padding-top: 20px;
+}
