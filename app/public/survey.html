@@ -4,10 +4,10 @@
 	<title>Friends</title>
 	<meta charset="utf-8">
 	<!-- JQUERY -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<!-- MATERIALIZE -->
 	<!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/css/materialize.min.css">
 	<!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.3/js/materialize.min.js"></script>
     <!-- ICONS -->
@@ -19,24 +19,254 @@
 	
 </head>
 <body>
+
+	<!-- NAVBAR -->
 	<nav>
-		<div class="nav-wrapper cyan darken-3 z-depth-2">
+		<div class="nav-wrapper deep-orange darken-1 z-depth-2">
 			<a href="/" class="brand-logo" id="navLogo"><i class="material-icons">thumb_up</i> Friend Finder</a>
 		</div>
 	</nav>
 	
 	<div class="container">
-		<div class="card">
-			<h4 class="card-title">Question 1</h4>
-			<div class="card-content">
-				<p>choice a</p>
-				<p>choice a</p>
-				<p>choice a</p>
-				<p>choice a</p>
+		<!-- INFO SECTION -->
+		<div class="row">
+			<div class="col s12">
+				<div class="card z-depth-2" id="surveyCard">
+					<div class="row">
+						<div class="col s12">
+							<div class="card-content deep-orange darken-1">
+								<h2 class="white-text" id="surveyHeading">Survey</h2>
+							</div>
+						</div>
+					</div>
+					<div class="card-content white">
+						<span class="card-title">About You</span>
+						<div class="input-field">
+							<input type="text" placeholder="Your Name (required)" id="name" class="validate">
+						</div>
+						<div class="input-field">
+							<input type="text" placeholder="Link To Profile Picture" id="photo" class="validate">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- QUESTIONS -->
+		<div class="row">
+			<div class="col s5">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 1</h1>
+						<h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
+						<div class="input-field">
+							<select id="q1">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s5 offset-s2">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 2</h1>
+						<h6>Generally speaking, you rely more on your experience than your imagination.</h6>
+						<div class="input-field">
+							<select id="q2">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s5">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 3</h1>
+						<h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
+						<div class="input-field">
+							<select id="q3">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s5 offset-s2">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 4</h1>
+						<h6>You rarely do something just out of sheer curiosity.</h6>
+						<div class="input-field">
+							<select id="q4">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s5">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 5</h1>
+						<h6>People can rarely upset you.</h6>
+						<div class="input-field">
+							<select id="q5">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s5 offset-s2">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 6</h1>
+						<h6>It is often difficult for you to relate to other people’s feelings.</h6>
+						<div class="input-field">
+							<select id="q6">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col s5">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 7</h1>
+						<h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
+						<div class="input-field">
+							<select id="q7">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s5 offset-s2">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 8</h1>
+						<h6>You rarely get carried away by fantasies and ideas.</h6>
+						<div class="input-field">
+							<select id="q8">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s5">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 9</h1>
+						<h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h6>
+						<div class="input-field">
+							<select id="q9">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s5 offset-s2">
+				<div class="card qCard">
+					<div class="card-content">
+						<h1 class="card-title">Question 10</h1>
+						<h6>You feel more energetic after spending time with a group of people.</h6>
+						<div class="input-field">
+							<select id="q10">
+							<option value="" disabled selected>Choose Your Option</option>
+							<option value="1">1 (strongly agree)</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5 (strongly disagree)</option>
+						</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s3 offset-s9">
+				<a data-target="modal1" id="add-btn" class="waves-effect waves-light btn deep-orange darken-1">Submit Survey</a>
 			</div>
 		</div>
 	</div>
-	
+
+	<div id="modal1" class="modal">
+	    <div class="modal-content">
+	      <h4 class="deep-orange-text text-darken-2">Your Best Match</h4>
+	      <div class="row">
+	      	<div class="col s4 offset-s1" id="myInfo">
+	      		
+	      	</div>
+	      	<div class="col s4 offset-s2" id="matchInfo">
+	      		
+	      	</div>
+	      </div>
+	    </div>
+	    <div class="modal-footer">
+	    	<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">home</i></a>
+	    	<a href="/" class="btn-floating btn-large waves-effect waves-light red"><img src="../public/assets/images/GitHub-Mark-Light-32px.png" class="gitLink"></a>
+	    	<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">list</i></a>
+	    </div>
+  </div>
 
 </body>
 </html>

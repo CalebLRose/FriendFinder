@@ -7,9 +7,27 @@ module.exports = function(app){
 		console.log(friends);
 	});
 
-	app.post("/api/friends", function(req,res) {
+	app.post("/api/new", function(req,res) {
 		var newFriend = req.body;
+		var newScore = newFriend.scores;
+		var total;
+		var best = 1000;
+		var index = -1;
+
+		for (var i = 0; i < friends.length; i++) {
+			total = 0;
+			for (var j = 0; j < friends[i].length; j++) {
+				var diff = Math.abs(newScore[j] - friends[i].scores[j]);
+				total+=diff;
+			}
+			if(total < best) {
+				best = total;
+				index = i;
+			}
+		}
+		console.log("bestie: "+friends[index]);
 		friends.push(newFriend);
+		res.json(friends[index]);
 	});
 };
 
