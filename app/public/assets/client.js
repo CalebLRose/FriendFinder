@@ -11,7 +11,7 @@ $(document).ready(function() {
         var newFriend = {
             name: $("#name").val().trim(),
             photo: $("#photo").val().trim(),
-            scores: [parseInt($("#q1").val()), parseInt($("#q2").val()), parseInt($("#q3").val()), parseInt($("#q4").val()), parseInt($("#q5").val()), parseInt($("#q6").val()), parseInt($("#q7").val()), parseInt($("#q8").val()), parseInt($("#q9").val()), parseInt($("#q10").val()) ]
+            scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
         };
         console.log(newFriend);
         $.post("/api/new", newFriend)
