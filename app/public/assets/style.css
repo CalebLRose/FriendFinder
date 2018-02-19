@@ -2,8 +2,12 @@ body {
 	background: url("./images/friends.jpg") fixed left no-repeat;
 }
 
+#myLinks{
+	padding-top: 25px;
+}
+
 #main {
-	padding-top: 200px;
+	padding-top: 75px;
 }
 
 #btnDiv {
